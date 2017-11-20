@@ -1,0 +1,37 @@
+// file name big-O-4.cpp
+
+// This program counts the number of times each loop is executed
+
+// ======================= header files =====================
+#include <iostream>        // for console I/O
+using namespace std;       // for standard library
+
+int main()
+{
+   int outer = 0;
+   int inner1 = 0, inner;
+   int total;
+   int j, k, n, m;
+
+   cout << "Enter the value of n: ";
+   cin >> n;
+
+   for (k = 1; k <= n; k++)
+   {
+      outer++;
+      inner = 0;
+
+      for (m = k; m <= n; m++)
+      {
+         inner++;
+         inner1++;
+      } // for m
+      cout << "inner is "  << inner << endl;
+   } // for k
+
+
+   total = outer + inner1;
+   cout << "total is " << total << endl;
+   cout << "outer is " << outer << endl;
+   cout << "inner is " << inner1 << endl;
+}
